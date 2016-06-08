@@ -145,6 +145,12 @@ font-weight: 900;
 	padding: 20% 0 0;
 }
 
+.content5{
+	position: relative;
+	padding: 5% 0 0;
+}
+
+
 .color{
 	color: #fcac45;
 }
@@ -568,4 +574,10 @@ nav#footer p{
 #footer i.fa:hover{
 	background: #FCAC45;
 	border-color: #FCAC45;
-	color: #ffffff;
+	color: #ffffff;}
+	
+.navback{
+	background-color:black
+}
+	
+	
