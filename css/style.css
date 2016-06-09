@@ -613,3 +613,19 @@ ul.taninah li{
 }
 ul.taninah li span{ 
 	margin-right: 10px;
+}
+#taninahleft{
+	margin-left:40px;
+	}
+	
+#taninahleftlist{ margin: 30px 0 0 ;}
+#taninahleftli{
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+#taninahleftspan{ 
+	margin-right: 10px;
+
