@@ -103,12 +103,13 @@
                         <small><em>Please feel free to contact us with any questions.  We will respond promptly.</em></small>            
                     </div>
 
-                    <form>
+                    <form Action="https://formsubmit.io/send/put unique code here" METHOD="POST">
                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                	<input hidden="hidden" name="Subject" value="Contact">
                                     <label for="exampleInputEmail1">First Name *</label>
-                                    <input class="form-control" placeholder="Enter firstname" required="required">
+                                    <input name="First Name" class="form-control" placeholder="Enter firstname" required="required">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -123,13 +124,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Jane Doe@iwanttogo.com">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Phone Number</label>
-                                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone">
+                                    <input type='tel' class="form-control" pattern='[\(]\d{3}[\)]\d{3}[\-]\d{4}' title='Phone Number (Format: (555)555-5555' placeholder="Enter area code in parenthesis (555) and use the dash"> 
                                 </div>
                             </div>
                         </div>
