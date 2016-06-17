@@ -1,4 +1,4 @@
-/* Galleries */
+﻿/* Galleries */
 .gallery { clear: both; width: 100%; margin: 0 0 2em 0; }
 .gallery::after { content:""; display: block; clear: both; }
 .gallery-item { position: relative; display: block; width: auto; }
