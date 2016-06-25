@@ -51,7 +51,7 @@ a:focus{
 	border-color: #fcac45;
 	border-width: 4px;
 	width: 60px;
-	float: left;
+	float: center;
 	clear: both;
 }
 .clearfix:after {
@@ -228,7 +228,6 @@ ul.about-list li span{
 	width: 40px;
 	text-align: center;
 	margin-top: 10px;
-	position: relative;
 	left: 17%;
 }
 #team{ margin: 0 auto}
