@@ -253,7 +253,8 @@ img.img-circle.team-img {
 }
 
 #tf-team .thumbnail .caption {
-	padding: 9px;
+  padding: 5px;
+	padding-bottom: 65px;
 	color: #F2F2F2;
 }
 
@@ -342,7 +343,7 @@ img.img-circle.team-img {
 /* Gallery Section 
 ==============================*/
 #tf-works{
-	padding: 80px 0;
+	padding: 0px 0;
 }
 .categories{ 
 	padding: 10px 0;
@@ -486,7 +487,7 @@ ol.type li a.active { font-weight: 700; }
 }
 /* Contact Section */
 #tf-contact{
-	padding: 80px 0;
+	padding: 0px 0;
 }
 
 label {
@@ -525,8 +526,7 @@ button.btn.tf-btn.btn-default {
 	float: right;
 	background: #FCAC45;
 	border: 0;
-	border-radius: 15px;
-	padding: 10px 40px;
+	padding: 8px 60px;
 	color: #ffffff;
 	text-transform: uppercase;
 }
