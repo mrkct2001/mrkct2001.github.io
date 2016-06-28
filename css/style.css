@@ -72,7 +72,6 @@ ul, ol{
 }
 /* Navigation */
 #tf-menu {
-	padding: 20px;
 	transition: all 0.1s;
 }
 #tf-menu.navbar-default {
