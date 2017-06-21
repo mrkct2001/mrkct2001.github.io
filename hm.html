@@ -1,0 +1,103 @@
+12.633318, 42.602875<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibXJrY3QyMDAxIiwiYSI6ImNqNDc2aGdzYjA0bGszMW13czNjeDdxZm0ifQ.d2-k77THV_kOnc4_lxcjuA';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-v9',
+    center: [12.633318, 42.602875],
+    zoom: 4
+});
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Honeymoon stop #1:  The Amalfi Coast, Italy</strong><p><a href=\"http://www.villafrancahotel.it/en/\" target=\"_blank\" title=\"Opens in a new window\">The Amalfi Coast</a> is a stretch of coastline on the southern coast of the Salerno Gulf on the Tyrrhenian Sea, located in the Province of Salerno of southern Italy.</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [14.493318, 40.652875]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Honeymoon stop #2:  Venice, Italy</strong><p><a href=\"https://www.belmond.com/hotel-cipriani-venice/?c=ppc&p=cip_brand_ml&cr=brand&gclid=CjwKCAjwsqjKBRBtEiwAkWyN39pUPlElfxEVOA2timx4bZWJEs4RTsboWwwbxKZxSxAtQZQpO7TNIRoCld0QAvD_BwE\" target=\"_blank\" title=\"Opens in a new window\">Venice</a> is a city in northeastern Italy and the capital of the Veneto region. It is situated across a group of 118 small islands that are separated by canals and linked by bridges. These are located in the shallow Venetian Lagoon, an enclosed bay that lies between the mouths of the Po and the Piave Rivers. Parts of Venice are renowned for the beauty of their settings, their architecture, and artwork.</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [12.493318, 44.900000]
+                    }
+                }, {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<strong>Honeymoon stop #3:  Santorini, Greece</strong><p><a href=\"http://www.astrasuites.com\" target=\"_blank\" title=\"Opens in a new window\">Santorini</a> is an island in the southern Aegean Sea, about 120 mi. southeast of Greece's mainland. It is the largest island of a small, circular archipelago which bears the same name and is the remnant of a volcanic caldera</p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [25.500000, 36.400000]
+                    }
+                },  ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        new mapboxgl.Popup()
+            .setLngLat(e.features[0].geometry.coordinates)
+            .setHTML(e.features[0].properties.description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});
+</script>
+
+</body>
+</html>
